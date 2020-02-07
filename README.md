@@ -44,7 +44,7 @@ func didPickDocument(document: Bean?) {
 
 ### Preview a bean
 ```swift
-self.presentPreview(document: document)
+self.presentPreview(document: Bean)
 ```
 ## License
 
