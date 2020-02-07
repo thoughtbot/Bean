@@ -14,9 +14,9 @@ A library that simplifies the way you deal with documents
 
 ## Installation
 
-### [SPM]
+### [SwiftPM]
 
-[SPM]: https://github.com/apple/swift-package-manager
+[SwiftPM]: https://github.com/apple/swift-package-manager
 
 In Xcode: File > Swift Packages > Add Package Dependency
 Paste: https://github.com/thoughtbot/Bean.git
