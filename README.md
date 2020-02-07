@@ -14,9 +14,9 @@ A library that simplifies the way you deal with documents
 
 ## Installation
 
-### [SPM]
+### [SwiftPM]
 
-[SPM]: https://github.com/apple/swift-package-manager
+[SwiftPM]: https://github.com/apple/swift-package-manager
 
 In Xcode: File > Swift Packages > Add Package Dependency
 Paste: https://github.com/thoughtbot/Bean.git
@@ -25,7 +25,7 @@ Paste: https://github.com/thoughtbot/Bean.git
 
 A Bean is a subclass of UIDocument that is returned after documents are selected
 
-### Conforming to the DocumentPickable
+### Conforming to DocumentPickable
 ```swift
 class ViewController: UIViewController, DocumentPickable {
 ```
@@ -44,11 +44,11 @@ func didPickDocument(document: Bean?) {
 
 ### Preview a bean
 ```swift
-self.presentPreview(document: document)
+self.presentPreview(document: Bean)
 ```
 ## License
 
-Fishery is Copyright © 2020 Abe Mangona and thoughtbot. It is free
+Bean is Copyright © 2020 Abe Mangona and thoughtbot. It is free
 software, and may be redistributed under the terms specified in the
 [LICENSE](/LICENSE) file.
 
