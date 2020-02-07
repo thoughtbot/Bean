@@ -48,7 +48,7 @@ self.presentPreview(document: Bean)
 ```
 ## License
 
-Fishery is Copyright © 2020 Abe Mangona and thoughtbot. It is free
+Bean is Copyright © 2020 Abe Mangona and thoughtbot. It is free
 software, and may be redistributed under the terms specified in the
 [LICENSE](/LICENSE) file.
 
