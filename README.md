@@ -25,7 +25,7 @@ Paste: https://github.com/thoughtbot/Bean.git
 
 A Bean is a subclass of UIDocument that is returned after documents are selected
 
-### Conforming to the DocumentPickable
+### Conforming to DocumentPickable
 ```swift
 class ViewController: UIViewController, DocumentPickable {
 ```
