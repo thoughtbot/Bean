@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
 
-  spec.name         = "Bean"
+  spec.name         = "bean"
   spec.version      = "1.0"
   spec.summary      = "Simplify documents"
   spec.homepage     = "https://github.com/thoughtbot/Bean"
