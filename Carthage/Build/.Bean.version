@@ -1,0 +1,19 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "v1.0.0",
+  "iOS" : [
+    {
+      "name" : "Bean",
+      "hash" : "97cd72bcdf2efd191a684e399cfc327f820db20f9c2e50be9ac61b07571fcfd3",
+      "swiftToolchainVersion" : "5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)"
+    }
+  ]
+}
