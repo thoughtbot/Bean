@@ -1,4 +1,4 @@
-# Bean [![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
+# Bean [![CircleCI](https://circleci.com/gh/thoughtbot/Bean.svg?style=svg)](https://circleci.com/gh/thoughtbot/Bean) [![SwiftPM compatible](https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
 
 A library that simplifies the way you deal with documents
 
