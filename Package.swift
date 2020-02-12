@@ -19,7 +19,7 @@ let package = Package(
     targets: [
         .target(
             name: "Bean",
-            dependencies: []),
+            dependencies: [], path: "Bean"),
         .testTarget(
             name: "BeanTests",
             dependencies: ["Bean"]),
