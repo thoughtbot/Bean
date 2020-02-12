@@ -1,0 +1,10 @@
+framework module Bean {
+  umbrella header "Bean.h"
+
+  export *
+  module * { export * }
+}
+
+module Bean.__Swift {
+    exclude header "Bean-Swift.h"
+}

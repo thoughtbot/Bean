@@ -1,0 +1,11 @@
+framework module Bean {
+  umbrella header "Bean.h"
+
+  export *
+  module * { export * }
+}
+
+module Bean.Swift {
+    header "Bean-Swift.h"
+    requires objc
+}
