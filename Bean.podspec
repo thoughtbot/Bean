@@ -9,7 +9,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "Bean"
-  spec.version      = "0.0.1"
+  spec.version      = "1.0"
   spec.summary      = "Simplify documents"
   spec.homepage     = "https://github.com/thoughtbot/Bean"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
@@ -20,7 +20,7 @@ Pod::Spec.new do |spec|
   spec.social_media_url = 'http://twitter.com/thoughtbot'
   spec.platform     = :ios
   spec.ios.deployment_target = "13.0"
-  spec.source       = { :git => "https://github.com/thoughtbot/Bean.git" }
+  spec.source       = { :git => "https://github.com/thoughtbot/Bean.git", :tag => "v#{spec.version}" }
   spec.source_files  = "Bean/*.{swift,h}"
 
 end
