@@ -1,3 +1,11 @@
+//
+//  BeanTests.swift
+//  BeanTests
+//
+//  Created by abe on 2/12/20.
+//  Copyright © 2020 thoughtbot. All rights reserved.
+//
+
 import XCTest
 @testable import Bean
 

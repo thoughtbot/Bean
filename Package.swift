@@ -22,6 +22,6 @@ let package = Package(
             dependencies: [], path: "Bean"),
         .testTarget(
             name: "BeanTests",
-            dependencies: ["Bean"]),
+            dependencies: ["Bean"], path: "BeanTests"),
     ]
 )
