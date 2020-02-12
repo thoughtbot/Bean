@@ -5,7 +5,7 @@
 version: 2.1
 
 jobs:
-  build-and-test:
+  build:
 
     macos:
       xcode: 11.0.0 # Specify the Xcode version to use
