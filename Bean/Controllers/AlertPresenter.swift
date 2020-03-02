@@ -18,31 +18,31 @@ class AlertPresenter {
         controller.present(alert, animated: true)
     }
     
-    func addActions(_ alert: UIAlertController) {
+    private func addActions(_ alert: UIAlertController) {
         alert.addAction(fileAction(title: "Files"))
         alert.addAction(folderAction(title: "Folders"))
         alert.addAction(cancelAction())
     }
 
-    func folderAction(title: String) -> UIAlertAction {
+    private func folderAction(title: String) -> UIAlertAction {
 
         return UIAlertAction(title: title, style: .default) { _ in
             self.handler(documentType: [kUTTypeFolder as String], sourceType: .folders)
         }
     }
 
-    func fileAction(title: String) -> UIAlertAction {
+    private func fileAction(title: String) -> UIAlertAction {
 
         return UIAlertAction(title: title, style: .default) { _ in
             self.handler(documentType: [kUTTypeMovie as String, kUTTypeImage as String, kUTTypeText as String, kUTTypeAudio as String], sourceType: .files)
         }
     }
     
-    func cancelAction() -> UIAlertAction {
+    private func cancelAction() -> UIAlertAction {
         return UIAlertAction(title: "Cancel", style: .destructive)
     }
 
-    func handler(documentType: [String], sourceType: SourceType) {
+    private func handler(documentType: [String], sourceType: SourceType) {
         let pickerController = DocumentPicker(documentTypes: documentType, in: .open, sourceType: sourceType)
         controller.present(pickerController, animated: true)
     }

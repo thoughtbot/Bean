@@ -13,9 +13,9 @@ class BFileManager {
         return Static.instance
     }
     
-    var status: Status = .notStarted
+    private(set) var status: Status = .notStarted
     
-    var pickedDocument: ((_ document: Bean?) -> ())?
+    public var pickedDocument: ((_ document: Bean?) -> ())?
     private(set) var numberOfFiles: Int = 0
     
     func start(selectedURL: URL, sourceType: SourceType) {
@@ -26,7 +26,7 @@ class BFileManager {
 
     }
     
-    func documentFromURL(url: URL, completion: @escaping((Status, Bean)->())) {
+    private func documentFromURL(url: URL, completion: @escaping((Status, Bean)->())) {
         generateThumbnailRepresentations(url: url) { (thumbnail, icon) in
             let image = thumbnail != nil ? thumbnail : icon
             let goodDoc = Bean(url: url, thumbnail: image)
@@ -35,7 +35,7 @@ class BFileManager {
         }
     }
     
-    func readURL(url: URL, with sourceType: SourceType, completion: @escaping((Status)->())) {
+    private func readURL(url: URL, with sourceType: SourceType, completion: @escaping((Status)->())) {
         
         _ = url.startAccessingSecurityScopedResource()
         
@@ -85,7 +85,7 @@ class BFileManager {
         }
     }
     
-    func generateThumbnailRepresentations(url: URL?, completion: @escaping ((UIImage?, UIImage?) -> ())) {
+    private func generateThumbnailRepresentations(url: URL?, completion: @escaping ((UIImage?, UIImage?) -> ())) {
         
         guard let url = url else {
             completion(nil, nil)

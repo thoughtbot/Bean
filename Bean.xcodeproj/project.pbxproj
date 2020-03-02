@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19CEE9DD2408487400C106DA /* Bean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DB3B3C23F3587F001262FF /* Bean.framework */; };
+		19CEE9DE2408487400C106DA /* Bean.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19DB3B3C23F3587F001262FF /* Bean.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		19DB3B4D23F3587F001262FF /* Bean.h in Headers */ = {isa = PBXBuildFile; fileRef = 19DB3B3F23F3587F001262FF /* Bean.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		19DB3B6423F35FC0001262FF /* SourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB3B5723F35FC0001262FF /* SourceType.swift */; };
 		19DB3B6523F35FC0001262FF /* Bean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB3B5823F35FC0001262FF /* Bean.swift */; };
@@ -24,14 +26,19 @@
 		19DB3B7D23F36048001262FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19DB3B7C23F36048001262FF /* Assets.xcassets */; };
 		19DB3B8023F36048001262FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19DB3B7E23F36048001262FF /* LaunchScreen.storyboard */; };
 		19DB3B8623F36184001262FF /* DocumentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB3B8523F36184001262FF /* DocumentCell.swift */; };
-		19DB3B8923F36D86001262FF /* Bean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DB3B3C23F3587F001262FF /* Bean.framework */; };
-		19DB3B8A23F36D86001262FF /* Bean.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 19DB3B3C23F3587F001262FF /* Bean.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		19DB3B9323F46483001262FF /* BeanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB3B9223F46483001262FF /* BeanTests.swift */; };
 		19DB3B9523F46483001262FF /* Bean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19DB3B3C23F3587F001262FF /* Bean.framework */; };
 		19DB3B9D23F466E1001262FF /* file01.png in Resources */ = {isa = PBXBuildFile; fileRef = 19DB3B9C23F466E1001262FF /* file01.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		19CEE9DF2408487400C106DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19DB3B3323F3587F001262FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19DB3B3B23F3587F001262FF;
+			remoteInfo = Bean;
+		};
 		19DB3B9623F46483001262FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 19DB3B3323F3587F001262FF /* Project object */;
@@ -39,16 +46,23 @@
 			remoteGlobalIDString = 19DB3B3B23F3587F001262FF;
 			remoteInfo = Bean;
 		};
+		19DB3BE123FCCF17001262FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19DB3B3323F3587F001262FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 19DB3B7023F36047001262FF;
+			remoteInfo = Example;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		19DB3B8B23F36D86001262FF /* Embed Frameworks */ = {
+		19CEE9E12408487400C106DA /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				19DB3B8A23F36D86001262FF /* Bean.framework in Embed Frameworks */,
+				19CEE9DE2408487400C106DA /* Bean.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19DB3B8923F36D86001262FF /* Bean.framework in Frameworks */,
+				19CEE9DD2408487400C106DA /* Bean.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,11 +282,12 @@
 				19DB3B6D23F36047001262FF /* Sources */,
 				19DB3B6E23F36047001262FF /* Frameworks */,
 				19DB3B6F23F36047001262FF /* Resources */,
-				19DB3B8B23F36D86001262FF /* Embed Frameworks */,
+				19CEE9E12408487400C106DA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				19CEE9E02408487400C106DA /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -291,6 +306,7 @@
 			);
 			dependencies = (
 				19DB3B9723F46483001262FF /* PBXTargetDependency */,
+				19DB3BE223FCCF17001262FF /* PBXTargetDependency */,
 			);
 			name = BeanTests;
 			productName = BeanTests;
@@ -315,6 +331,7 @@
 					};
 					19DB3B8F23F46483001262FF = {
 						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 19DB3B7023F36047001262FF;
 					};
 				};
 			};
@@ -405,10 +422,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		19CEE9E02408487400C106DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19DB3B3B23F3587F001262FF /* Bean */;
+			targetProxy = 19CEE9DF2408487400C106DA /* PBXContainerItemProxy */;
+		};
 		19DB3B9723F46483001262FF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 19DB3B3B23F3587F001262FF /* Bean */;
 			targetProxy = 19DB3B9623F46483001262FF /* PBXContainerItemProxy */;
+		};
+		19DB3BE223FCCF17001262FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 19DB3B7023F36047001262FF /* Example */;
+			targetProxy = 19DB3BE123FCCF17001262FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -604,6 +631,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96893LKBDZ;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -613,6 +641,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -622,6 +651,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96893LKBDZ;
 				INFOPLIST_FILE = Example/Info.plist;
@@ -631,6 +661,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtbot.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -639,6 +670,7 @@
 		19DB3B9823F46483001262FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96893LKBDZ;
 				INFOPLIST_FILE = BeanTests/Info.plist;
@@ -651,12 +683,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
 			};
 			name = Debug;
 		};
 		19DB3B9923F46483001262FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96893LKBDZ;
 				INFOPLIST_FILE = BeanTests/Info.plist;
@@ -669,6 +703,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Example.app/Example";
 			};
 			name = Release;
 		};

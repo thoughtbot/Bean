@@ -12,7 +12,7 @@ class PreviewPresenter: QLPreviewControllerDataSource {
         self.controller = controller
     }
  
-    func present() {
+    public func present() {
         let previewController = QLPreviewController()
         previewController.dataSource = self
         controller.present(previewController, animated: true)

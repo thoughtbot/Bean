@@ -1,5 +1,5 @@
 
-public enum SourceType {
+internal enum SourceType {
     case files
     case folders
 }
