@@ -4,8 +4,8 @@ import UIKit
 @available(iOS 11.0, *)
 public protocol DocumentPickable: class {
     func pickDocuments()
-    func didPickDocument(document: Bean?)
-    func presentPreview(document: Bean)
+    func didPickDocument(bean: Bean?)
+    func presentPreview(bean: Bean)
 }
 
 @available(iOS 13.0, *)
@@ -17,8 +17,8 @@ public extension DocumentPickable where Self: UIViewController {
         BFileManager.current?.pickedDocument = self.didPickDocument
     }
     
-    func presentPreview(document: Bean) {
-        let previewPresenter = PreviewPresenter(document: document, presenting: self)
+    func presentPreview(bean: Bean) {
+        let previewPresenter = PreviewPresenter(bean: bean, presenting: self)
         previewPresenter.present()
     }
 }

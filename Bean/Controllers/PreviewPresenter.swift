@@ -4,11 +4,11 @@ import QuickLook
 @available(iOS 11.0, *)
 class PreviewPresenter: QLPreviewControllerDataSource {
     
-    var doument: Bean!
+    var bean: Bean!
     var controller: UIViewController!
     
-    init(document: Bean, presenting controller: UIViewController) {
-        self.doument = document
+    init(bean: Bean, presenting controller: UIViewController) {
+        self.bean = bean
         self.controller = controller
     }
  
@@ -23,7 +23,7 @@ class PreviewPresenter: QLPreviewControllerDataSource {
     }
     
     func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
-        doument.fileURL as QLPreviewItem
+        bean.fileURL as QLPreviewItem
     }
 
 }

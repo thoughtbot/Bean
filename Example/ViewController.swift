@@ -17,8 +17,8 @@ class ViewController: UIViewController, DocumentPickable {
         }
     }
 
-    func didPickDocument(document: Bean?) {
-        documents.append(document)
+    func didPickDocument(bean: Bean?) {
+        documents.append(bean)
     }
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -52,7 +52,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let document = documents[indexPath.row]!
-        self.presentPreview(document: document)
+        self.presentPreview(bean: document)
     }
 
 

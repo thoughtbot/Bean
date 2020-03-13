@@ -10,4 +10,12 @@ extension URL {
         return self.lastPathComponent == ".DS_Store"
     }
     
+    var creationDate: Date? {
+        return (try? resourceValues(forKeys: [.creationDateKey]))?.creationDate
+    }
+    
+    var name: String? {
+        return (try? resourceValues(forKeys: [.nameKey]))?.name
+    }
+    
 }
