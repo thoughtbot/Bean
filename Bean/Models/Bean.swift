@@ -2,17 +2,19 @@
 import UIKit
 
 @available(iOS 11.0, *)
-public class Bean: UIDocument {
+public class Bean: UIDocument, Identifiable {
     
     public private(set) var data: Data?
     public private(set) var fileName: String?
     public private(set) var typeName: String?
     public private(set) var thumbnail: UIImage?
     public private(set) var creationDate: Date?
+    public private(set) var url: URL!
     
     convenience init(url: URL, thumbnail: UIImage?) {
         self.init(fileURL: url)
         self.thumbnail = thumbnail
+        self.url = url
         fileName = self.fileURL.lastPathComponent
         creationDate = url.creationDate
     }
