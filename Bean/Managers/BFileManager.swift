@@ -29,9 +29,9 @@ class BFileManager {
     private func documentFromURL(url: URL, completion: @escaping((Status, Bean)->())) {
         generateThumbnailRepresentations(url: url) { (thumbnail, icon) in
             let image = thumbnail != nil ? thumbnail : icon
-            let goodDoc = Bean(url: url, thumbnail: image)
+            let bean = Bean(url: url, thumbnail: image)
             url.stopAccessingSecurityScopedResource()
-            completion(.completed, goodDoc)
+            completion(.completed, bean)
         }
     }
     
@@ -51,10 +51,10 @@ class BFileManager {
             switch sourceType {
             case .files:
                 numberOfFiles = 1
-                documentFromURL(url: url) { status, goodDoc in
+                documentFromURL(url: url) { status, bean in
                     DispatchQueue.main.async {
                         self.numberOfFiles -= 1
-                        self.pickedDocument?(goodDoc)
+                        self.pickedDocument?(bean)
                         if self.numberOfFiles == 0 {
                             completion(.completed)
                         }
@@ -65,10 +65,10 @@ class BFileManager {
                 
                 for case let fileURL as URL in fileList! {
                     if !fileURL.isDirectory && !fileURL.isDSFile {
-                        documentFromURL(url: fileURL) { status, goodDoc in
+                        documentFromURL(url: fileURL) { status, bean in
                             DispatchQueue.main.async {
                                 self.numberOfFiles -= 1
-                                self.pickedDocument?(goodDoc)
+                                self.pickedDocument?(bean)
                                 if self.numberOfFiles == 0 {
                                     completion(.completed)
                                 }
